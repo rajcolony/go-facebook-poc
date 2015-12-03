@@ -47,5 +47,5 @@ func facebook(writer http.ResponseWriter, request *http.Request) {
 
 func welcome(writer http.ResponseWriter, request *http.Request) {
 	writer.Header().Set("Content-Type", "text/html; charset=utf-8")
-	writer.Write([]byte("<h1>Welcome to GoPOC!!!</h1>"))
+	writer.Write([]byte("<h1>Welcome to Go Facebook POC!!!</h1>"))
 }
