@@ -31,7 +31,7 @@ func facebook(writer http.ResponseWriter, request *http.Request) {
 	resp, _ := client.Do(r)
 	if error != nil {
 		fmt.Printf("%s", error)
-		//os.Exit(1)
+		//os.Exit(1) 
 	}
 
 	defer resp.Body.Close()
