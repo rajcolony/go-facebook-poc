@@ -1,0 +1,20 @@
+# Java class files
+bin/
+work/
+
+# Java class files
+**/*.class
+
+# Gradle files
+.gradle/
+
+# Build files
+build/
+.asscache
+
+# IntelliJ Idea
+.idea/
+*.iml
+
+# Mac OSX
+**/.DS_Store
