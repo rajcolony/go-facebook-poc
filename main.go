@@ -3,6 +3,7 @@ package main
 import (
 	"net/http"
 	"fmt"
+	"log"
 	"io/ioutil"
 	"bytes"
 	"net/url"
@@ -12,7 +13,10 @@ func main() {
 	println("Init facebook.go > main()")
 	http.HandleFunc("/facebook", facebook)
 	http.HandleFunc("/", welcome)
-	http.ListenAndServe(":8888", nil)
+	err := http.ListenAndServe("0.0.0.0:3000", nil)
+	if err != nil {
+		log.Fatal("ListenAndServe: ", err)
+	}
 }
 
 func facebook(writer http.ResponseWriter, request *http.Request) {
